@@ -74,9 +74,9 @@ function Car(model, milesPerGallon) {
     this.odometer = 0;
 }
 
-Car.prototype.fill(gallons);
-const tank = [];
-tank.push(gallons);
+Car.prototype.fill = function fill(gallons) {
+    return this.tank += gallons;
+}
 
 /*
   TASK 3
@@ -85,9 +85,19 @@ tank.push(gallons);
     - Besides the methods on Person.prototype, babies have the ability to `.play()`:
         + Should return a string "Playing with x", x being the favorite toy.
 */
-function Baby() {
-
+function Baby(name, age) {
+    this.name = name;
+    this.age = age;
+    // this.favoriteToy = favoriteToy;
 }
+
+Baby.prototype.play = function(favoriteToy) {
+    return "Playing with " + favoriteToy;
+}
+
+// class Person extends Baby {
+//     constructor(name, age, favoriteToy)
+// }
 
 /* 
   TASK 4
