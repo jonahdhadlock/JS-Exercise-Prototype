@@ -67,9 +67,16 @@ Person.prototype.toString = function() {
     - Give cars the ability to get fueled with a `.fill(gallons)` method. Add the gallons to `tank`.
 */
 
-function Car() {
-
+function Car(model, milesPerGallon) {
+    this.model = model;
+    this.milesPerGallon = milesPerGallon;
+    this.tank = 0;
+    this.odometer = 0;
 }
+
+Car.prototype.fill(gallons);
+const tank = [];
+tank.push(gallons);
 
 /*
   TASK 3
